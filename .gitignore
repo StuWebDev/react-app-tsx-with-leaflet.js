@@ -11,6 +11,8 @@ node_modules
 
 # production
 /build
+/dist
+/.vscode
 
 # misc
 .DS_Store

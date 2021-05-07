@@ -22,5 +22,7 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "compileOnSave": false,
+  "exclude": ["node_modules"]
 }
