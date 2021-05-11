@@ -14,38 +14,38 @@ module.exports = {
     contentBase: './dist',
     inline: true,
     historyApiFallback: true,
-    port: 8081
+    port: 3000
   },
   module: {
       rules: [
-          {
-              test: /\.(js|tsx?)$/,
-              use: ['babel-loader'],
-              exclude: /node_modules/
-          },
-          {
-              test: /\.css$/,
-              use: ['style-loader', 'css-loader']
-          },
-          {
-              test: /\.(png|jpg|gif|svg)$/i,
-              use: [{
-                  loader: 'url-loader',
-                  options: {
-                      limit: true
-                  }
-              }],
-              include: [
-                  path.resolve(__dirname, 'node_modules/leaflet/dist/images')
-              ]
-          },
-          {
-              test: /\.(woff|woff2|eot|ttf|svg)$/i,
-              use: ['url-loader'],
-              include: [
-                  path.resolve(__dirname, 'node_modules/font-awesome/fonts')
-              ]
-          }
+        {
+            test: /\.(js|tsx?)$/,
+            use: ['babel-loader'],
+            exclude: /node_modules/
+        },
+        {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        },
+        {
+            test: /\.(png|jpg|gif|svg)$/i,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: true
+                }
+            }],
+            include: [
+                path.resolve(__dirname, 'node_modules/leaflet/dist/images')
+            ]
+        },
+        {
+            test: /\.(woff|woff2|eot|ttf|svg)$/i,
+            use: ['url-loader'],
+            include: [
+                path.resolve(__dirname, 'node_modules/font-awesome/fonts')
+            ]
+        }
       ]
   },
   resolve: {
